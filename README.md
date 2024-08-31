@@ -23,8 +23,8 @@ This Enhanced ToDo Application is a feature-rich task management tool built with
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/enhanced-todo-app.git
-   cd enhanced-todo-app
+   git clone https://github.com/Nodik2006/To-Do-List.git
+   cd To-Do-List
    ```
 
 2. Install the required dependencies:
