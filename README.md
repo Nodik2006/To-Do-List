@@ -37,7 +37,7 @@ This Enhanced ToDo Application is a feature-rich task management tool built with
 Run the application using Python:
 
 ```
-python todo_app.py
+python app.py
 ```
 
 ### Adding a Task
