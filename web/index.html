@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+  </head>
+
+  <body class="red-theme">
+    <div class="container">
+      <header>
+        <img src="img/logo.png" alt="Logo" class="logo" />
+        <h1>Enhanced ToDo List</h1>
+
+        <button onclick="switchToViewTasks()" class="list-button top-right">
+          <img src="img/list.png" alt="List Icon" class="icon" />
+        </button>
+      </header>
+
+      <div id="addTaskInterface" class="input-group">
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Enter a new task title..."
+        />
+
+        <textarea
+          id="taskDetails"
+          placeholder="Enter task details (optional)..."
+        ></textarea>
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="toggleMode()">Toggle Dark Mode</button>
+      </div>
+      <div id="viewTaskInterface" class="task-list" style="display: none">
+        <ul id="taskList"></ul>
+        <button onclick="switchToAddTask()">Back to Add Task</button>
+      </div>
+    </div>
+
+    <div id="taskDetailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTaskTitle"></h2>
+        <p id="modalTaskDetails"></p>
+      </div>
+    </div>
+
+    <script src="/eel.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

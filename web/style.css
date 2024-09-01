@@ -1,0 +1,224 @@
+/* Общие стили для тела страницы */
+body {
+  font-family: "Poppins", sans-serif; /* Выбор шрифта */
+  margin: 0; /* Убираем внешние отступы */
+  padding: 20px; /* Добавляем внутренние отступы */
+  display: flex; /* Используем flexbox для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  min-height: 100vh; /* Минимальная высота - 100% высоты экрана */
+  color: #fff; /* Цвет текста - белый */
+  transition: background 0.3s ease; /* Плавный переход фона при изменении темы */
+}
+
+/* Тема с красным градиентом */
+.red-theme {
+  background: linear-gradient(45deg, #680000, #8a4300, #b68e1f);
+}
+
+/* Темная тема */
+.dark-theme {
+  background: linear-gradient(45deg, #0f2f3a, #1a4d4d, #2a6b6b);
+}
+
+/* Основной контейнер */
+.container {
+  width: 100%;
+  max-width: 500px; /* Максимальная ширина контейнера */
+  padding: 40px; /* Внутренние отступы */
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  border-radius: 20px; /* Скругленные углы */
+  backdrop-filter: blur(10px); /* Эффект размытия фона */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Тень */
+  position: relative; /* Для позиционирования элементов внутри */
+}
+
+/* Заголовок */
+header {
+  display: flex; /* Используем flexbox для выравнивания */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  justify-content: center; /* Центрируем по горизонтали */
+  margin-bottom: 30px; /* Отступ снизу */
+  position: relative; /* Для позиционирования кнопки */
+}
+
+/* Логотип в заголовке */
+header .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; /* Отступ справа */
+}
+
+/* Заголовок h1 */
+h1 {
+  text-align: center; /* Центрируем текст */
+  margin-bottom: 30px; /* Отступ снизу */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Тень текста */
+}
+
+/* Группы ввода и списка задач */
+.input-group,
+.task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-list {
+  font-size: 24px;
+}
+
+.input-group {
+  margin-bottom: 40px;
+}
+
+/* Поля ввода и textarea */
+.input-group input,
+.input-group textarea {
+  width: calc(100% - 24px); /* Ширина с учетом отступов */
+  padding: 12px; /* Внутренние отступы */
+  margin-bottom: 20px; /* Отступ снизу */
+  border: none; /* Убираем рамку */
+  border-radius: 50px; /* Скругленные углы */
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+  color: inherit; /* Наследуем цвет текста */
+  font-size: 16px; /* Размер шрифта */
+}
+
+/* Плейсхолдеры в полях ввода */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Полупрозрачный цвет */
+}
+
+/* Кнопки */
+.input-group button,
+.task-list button {
+  width: 100%;
+  padding: 12px; /* Внутренние отступы */
+  background: linear-gradient(45deg, #ff4500, #ff6347); /* Градиент */
+  color: white; /* Цвет текста */
+  border: none; /* Убираем рамку */
+  border-radius: 50px; /* Скругленные углы */
+  cursor: pointer; /* Указатель при наведении */
+  font-size: 16px; /* Размер шрифта */
+  transition: transform 0.3s ease; /* Плавное изменение размера при наведении */
+  margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Кнопка "List" в группе ввода */
+.input-group button.list-button {
+  background: none; /* Убираем фон */
+  margin-left: 10px; /* Отступ слева */
+}
+
+/* Иконка в кнопке "List" */
+.input-group button.list-button img.icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+/* Эффект при наведении на кнопки */
+.input-group button:hover,
+.task-list button:hover {
+  transform: scale(1.05); /* Увеличиваем размер */
+}
+
+/* Кнопка "List" в правом верхнем углу */
+.list-button.top-right {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10px; /* Отступ сверху */
+  right: 10px; /* Отступ справа */
+  background: none; /* Убираем фон */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Иконка в кнопке "List" в правом верхнем углу */
+.list-button.top-right img.icon {
+  width: 40px;
+  height: 40px;
+  border: none; /* Убираем рамку */
+}
+
+/* Список задач */
+.task-list ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin-top: 20px; /* Отступ сверху */
+}
+
+/* Элементы списка задач */
+.task-list ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-list ul li > div {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.task-list ul li > span {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Выполненные задачи */
+.task-list ul li.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+
+/* Стили для кнопок с иконками в списке задач */
+.task-list button {
+  background: none; /* Убираем фон у кнопок */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0 10px; /* Добавляем небольшие отступы между кнопками */
+}
+
+.task-list button img {
+  width: 24px; /* Устанавливаем размер иконок */
+  height: 24px;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none; /* Скрываем по умолчанию */
+  position: fixed; /* Остается на месте при прокрутке */
+  z-index: 1; /* Сидит поверх всего остального */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Включаем прокрутку, если контент выходит за пределы */
+  background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  background-color: #333;
+  margin: 15% auto; /* 15% от верха и центрируем */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Можно настроить ширину */
+  max-width: 500px; /* Максимальная ширина */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
