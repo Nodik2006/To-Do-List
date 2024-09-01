@@ -24,35 +24,35 @@ body {
 /* Основной контейнер */
 .container {
   width: 100%;
-  max-width: 500px; /* Максимальная ширина контейнера */
-  padding: 40px; /* Внутренние отступы */
-  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
-  border-radius: 20px; /* Скругленные углы */
-  backdrop-filter: blur(10px); /* Эффект размытия фона */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Тень */
-  position: relative; /* Для позиционирования элементов внутри */
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
 }
 
 /* Заголовок */
 header {
-  display: flex; /* Используем flexbox для выравнивания */
-  align-items: center; /* Выравниваем элементы по вертикали */
-  justify-content: center; /* Центрируем по горизонтали */
-  margin-bottom: 30px; /* Отступ снизу */
-  position: relative; /* Для позиционирования кнопки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 /* Логотип в заголовке */
 header .logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px; /* Отступ справа */
 }
 
 /* Заголовок h1 */
 h1 {
   text-align: center; /* Центрируем текст */
-  margin-bottom: 30px; /* Отступ снизу */
+  margin-bottom: 20px; /* Отступ снизу */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Тень текста */
 }
 
@@ -125,20 +125,19 @@ h1 {
   transform: scale(1.05); /* Увеличиваем размер */
 }
 
-/* Кнопка "List" в правом верхнем углу */
 .list-button.top-right {
-  position: absolute; /* Абсолютное позиционирование */
-  top: 10px; /* Отступ сверху */
-  right: 10px; /* Отступ справа */
+  position: absolute;
+  top: 0; /* Отступ от верхнего края */
+  right: 5px; /* Отступ от правого края */
   background: none; /* Убираем фон */
-  padding: 0; /* Убираем внутренние отступы */
+  outline: none; /* Убираем обводку при фокусе */
+  border: none; /* Убираем границы */
 }
 
 /* Иконка в кнопке "List" в правом верхнем углу */
 .list-button.top-right img.icon {
   width: 40px;
   height: 40px;
-  border: none; /* Убираем рамку */
 }
 
 /* Список задач */
