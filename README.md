@@ -24,7 +24,7 @@ Enhanced ToDo List is a simple but powerful task management application develope
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Nodik2006/To-Do-List.git
+   git clone https://github.com/n1dlee/To-Do-List.git
    cd To-Do-List
    ```
 
